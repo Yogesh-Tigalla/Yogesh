@@ -1,0 +1,22 @@
+- hosts: web
+  remote_user: root
+  become: yes
+  tasks: 
+  - name: install apache
+    yum: 
+      name: httpd
+      state: installed
+  - name: install nmap
+    yum:
+      name: nmap
+      state: installed
+  - name: enable httpd
+    service: 
+      name: httpd
+      state:  started
+      enabled:  true
+  - name: using shell module
+    shell:
+      cmd:
+        |
+        wget -O /var/www/html/index.html https://www.netfllix.com/in/;
