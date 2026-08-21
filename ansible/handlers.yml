@@ -1,0 +1,20 @@
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Install apache
+      yum:
+        name: httpd
+        state: installed
+      notify: restart httpd
+
+    - name: Install nmap
+      yum:
+        name: nmap
+        state: installed
+
+  handlers:
+    - name: restart httpd
+      service:
+        name: httpd
+        state: restarted

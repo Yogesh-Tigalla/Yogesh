@@ -1,0 +1,19 @@
+- hosts: all
+  remote_user: ec2-user
+  become: yes
+
+  vars:
+    package_name: httpd
+    service_name: httpd
+
+  tasks:
+    - name: Install apache
+      yum:
+        name: "{{ package_name }}"
+        state: present
+
+    - name: start and enable httpd
+      service:
+        name: "{{ service_name }}"
+        state: started
+        enable: true

@@ -1,0 +1,45 @@
+
+
+
+items:
+  - banana 
+  - orange
+  - straberry 
+  - apple
+  - broccoli
+  - cabbage
+  - grapes
+  - carrot
+  - tomato
+  - peppers
+  - watermelon
+  - lettuce
+
+
+
+fruit:
+  yellow_colour:
+    - banana
+  orange_colour:
+    - orange
+  red_colour:
+    - apple
+    - straberry
+  green_colour:
+    - grapes
+    - watermelon
+
+
+
+veg:
+  green_colour:
+   - broccoli
+   - lettuce
+  white_colour:
+    - cabbage
+  orange_colour:
+    - carrot
+  red_colour:
+    - tomato
+  black_colour:
+    - peppers
