@@ -1,49 +1,33 @@
-```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+      https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+```
+<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yogesh</groupId>
-    <artifactId>yogesh-devops</artifactId>
-    <version>1.0</version>
+<groupId>com.yogesh</groupId>
+<artifactId>yogesh-devops</artifactId>
+<version>1.0</version>
 
-    <packaging>war</packaging>
+<packaging>war</packaging>
 
-    <name>Yogesh DevOps Website</name>
+<name>Yogesh DevOps Website</name>
 
-    <build>
-        <finalName>yogesh-devops</finalName>
+<build>
+    <finalName>yogesh-devops</finalName>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
 
 </project>
-```
-
-### What changed?
-
-Only this configuration was added:
-
-```xml
-<configuration>
-    <failOnMissingWebXml>false</failOnMissingWebXml>
-</configuration>
-```
-
-This tells Maven:
-
-> **"This is a web application, but don't fail the WAR build just because `web.xml` is missing."**
-
-After replacing it, **don't run Jenkins yet**. Just tell me **done**, and I'll guide you through the next step.
