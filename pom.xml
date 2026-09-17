@@ -1,3 +1,4 @@
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -21,8 +22,28 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
         </plugins>
     </build>
 
 </project>
+```
+
+### What changed?
+
+Only this configuration was added:
+
+```xml
+<configuration>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+</configuration>
+```
+
+This tells Maven:
+
+> **"This is a web application, but don't fail the WAR build just because `web.xml` is missing."**
+
+After replacing it, **don't run Jenkins yet**. Just tell me **done**, and I'll guide you through the next step.
